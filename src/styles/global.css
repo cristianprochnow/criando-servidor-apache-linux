@@ -6,8 +6,19 @@
   box-sizing: border-box;
 }
 
-html, button {
+html{
   background-color: var(--background);
   color: var(--text);
   font-family: 'Inter', sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1024px;
+  margin: auto;
 }
