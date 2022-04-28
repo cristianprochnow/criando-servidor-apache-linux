@@ -3,11 +3,16 @@
   text-align: center;
   text-decoration: none;
   color: var(--background);
-  background: var(--heading);
+  background: var(--title);
   border-radius: .8rem;
   font-size: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
+  transition: opacity .3s;
+}
+
+.action-link:hover {
+  opacity: 0.8;
 }
