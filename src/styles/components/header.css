@@ -8,6 +8,10 @@
   gap: .8rem;
 }
 
+.header .action-link {
+  width: 100%;
+}
+
 .header .action-link:first-child {
   background-color: var(--background);
   color: var(--text);
@@ -18,5 +22,9 @@
   .header {
     justify-content: space-between;
     flex-direction: row;
+  }
+
+  .header .action-link {
+    width: auto;
   }
 }
