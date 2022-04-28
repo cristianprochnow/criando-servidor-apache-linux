@@ -22,6 +22,11 @@ thead {
 thead tr td {
   color: var(--background) !important;
   font-weight: 700;
+  text-align: center;
+}
+
+tbody tr td {
+  text-align: center;
 }
 
 td {
