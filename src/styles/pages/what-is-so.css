@@ -1,22 +1,7 @@
 @import url(../components/wrapper.css);
-
-h1 {
-  font-size: 4rem;
-  line-height: 5.6rem;
-  margin-bottom: 1.6rem;
-}
-
-h2 {
-  font-size: 3.2rem;
-  line-height: 4.8rem;
-  margin-bottom: 1.2rem;
-}
-
-p {
-  font-size: 1.6rem;
-  line-height: 3.2rem;
-  color: var(--text);
-}
+@import url(../components/text.css);
+@import url(../components/title.css);
+@import url(../components/subtitle.css);
 
 img {
   width: 100%;

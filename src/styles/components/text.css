@@ -1,0 +1,9 @@
+.text {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  color: var(--text);
+}
+
+.text + .text {
+  margin-top: 1.2rem;
+}
