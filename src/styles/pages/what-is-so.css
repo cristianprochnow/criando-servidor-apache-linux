@@ -2,6 +2,8 @@
 @import url(../components/text.css);
 @import url(../components/title.css);
 @import url(../components/subtitle.css);
+@import url(../components/action-link.css);
+@import url(../components/header.css);
 
 img {
   width: 100%;
