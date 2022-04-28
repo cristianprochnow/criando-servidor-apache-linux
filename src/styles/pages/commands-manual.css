@@ -1,0 +1,30 @@
+@import url(../components/wrapper.css);
+@import url(../components/title.css);
+@import url(../components/text.css);
+@import url(../components/header.css);
+@import url(../components/bold.css);
+@import url(../components/italic.css);
+
+#table {
+  border: 2px solid var(--title);
+  border-radius: .8rem;
+}
+
+table {
+  border-radius: .8rem;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: var(--title);
+}
+
+thead tr td {
+  color: var(--background) !important;
+  font-weight: 700;
+}
+
+td {
+  border: 2px solid var(--title);
+  padding: .8rem;
+}
