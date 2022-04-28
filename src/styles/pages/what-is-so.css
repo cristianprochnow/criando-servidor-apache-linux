@@ -22,17 +22,3 @@ img {
   width: 100%;
   margin-bottom: 1.6rem;
 }
-
-a {
-  text-decoration: none;
-  color: var(--text);
-  font-size: 1.6rem;
-  display: flex;
-  width: 3.2rem;
-  align-items: center;
-  justify-content: center;
-}
-
-a img {
-  width: 2.4rem;
-}
