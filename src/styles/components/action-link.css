@@ -1,0 +1,13 @@
+.action-link {
+  height: 4.8rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--background);
+  background: var(--heading);
+  border-radius: .8rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
