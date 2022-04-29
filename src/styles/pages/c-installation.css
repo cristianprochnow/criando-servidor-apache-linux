@@ -6,6 +6,7 @@
 @import url(../components/bold.css);
 @import url(../components/code-block.css);
 @import url(../components/topic.css);
+@import url(../components/link.css);
 
 img {
   width: 100%;
