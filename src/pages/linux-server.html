@@ -65,6 +65,41 @@
       <p class="text">Clique ali no link indicado na imagem, e após abrir o explorador de arquivos, selecione o arquivo da imagem do Ubuntu. Imagem que você realizou o download no início desse tutorial.</p>
       <img src="../assets/images/vm-setup/09-start.jpg" alt="Inserir imagem ISO">
       <p class="text">E pronto, agora está tudo preparado. Basta clicar no botão indicado, de iniciar, e começar a instalação do sistema operacional conforme o passo a passo do instalador.</p>
+
+      <h2 class="subtitle">Passo a passo de criação do servidor</h2>
+
+      <h3 class="topic">Abra um terminal (Super + T)</h3>
+      <p class="text">Essa telinha que se abriu é a tela de comando. Esse é o módulo do sistema que te proporciona acesso a qualquer funcionalidade aqui contida, desde que seja por linha de comando. É por aqui que iremos instalar pacotes, realizar configurações e criar nosso servidor.</p>
+
+      <h3 class="topic">Comando atrás de comando</h3>
+      <p class="text">E agora veremos cada um dos comandos e para que cada um deles serve. Note que, ao digitar “sudo”, o sistema vai pedir a sua senha de administração, isto é, a senha que você usa para desbloquear o seu PC ao entrar. “Sudo” nada mais que uma abreviação para “Super User Do” (super usuário, faça!).</p>
+
+      <span class="code-block"><code><span class="term-symbol">&gt;</span>  sudo apt update</code></span>
+      <p class="text">Esse comando vai garantir com que todos as listas de pacotes mais recentes estejam disponíveis para que possamos baixar e instalar em nossa máquina. </p>
+
+      <span class="code-block"><code><span class="term-symbol">&gt;</span>  sudo apt upgrade –y</code></span>
+      <p class="text">Esse comando vai instalar atualizações para todos os pacotes que possuam uma nova versão disponível. A flag –y apenas está presente para que a pergunta de “Você tem certeza” seja respondida com “sim” diretamente. </p>
+
+      <span class="code-block"><code><span class="term-symbol">&gt;</span>  sudo apt install apache2</code></span>
+      <p class="text">E aqui temos o comando que vai instalar, de fato, o pacote primordial ao nosso servidor. Apache é um motor que transforma nossa máquina em um pequeno servidor local, a partir daqui já avançamos um grande passo, já que restam apenas leves configurações para que já possamos começar nosso projeto. </p>
+
+      <span class="code-block"><code><span class="term-symbol">&gt;</span>  sudo ufw app list</code></span>
+      <p class="text">Com esse comando, temos acesso à lista de apps que fazem uso do firewall do nosso sistema operacional. São os apps que precisam de permissão dessa ferramenta que que possam realizar a comunicação com outros dispositivos na rede. </p>
+      <p class="text">Ao rodar esse comando, veremos na lista o pacote que acabamos de instalar, que é o Apache. Esse item precisa de acesso pelo firewall, para que possa proporcionar a comunicação do nosso PC, à rede. Portanto, o próximo passo, vai ser liberar o seu acesso. </p>
+      <p class="text">E, para completar, “UFW” nada mais é que uma sigla, novamente, para “Uncomplicated FireWall” </p>
+
+      <span class="code-block"><code><span class="term-symbol">&gt;</span>  sudo ufw allow 'Apache'</code></span>
+      <p class="text">Aqui liberamos o pacote “Apache” para que possa se comunicar através do Firewall. Caso o pacote em questão esteja nomeado com qualquer outro nome, basta substituir “Apache” pelo nome que apareceu na lista de pacotes, no comando que rodamos anteriormente. </p>
+
+      <span class="code-block"><code><span class="term-symbol">&gt;</span>  sudo systemctl status apache2</code></span>
+      <p class="text">Comando para verificar o status do serviço do Apache no sistema. É com esse comando que a gente pode saber se o serviço já está ativo, se ocorreu um erro, se ainda tem que ser feito algo e assim por diante. <span class="bold">Systemctl</span> é o módulo do sistema que é responsável pela administração dos serviços do sistema, quais deles iniciam ao ligar o PC, quais continuam ativos no fundo, dentre outras funções. É um pacote que já vem com o sistema e é muito importante para o funcionamento deste. </p>
+
+      <span class="code-block"><code><span class="term-symbol">&gt;</span>  cd /var/www/html/</code></span>
+      <p class="text">Acesse a pasta do servidor, que foi criada automaticamente na instalação do pacote <span class="bold">apache2</span>. É aqui dentro que todos os seus projetos e arquivos irão ficar, para assim podermos deixá-los no servidor. </p>
+
+      <span class="code-block"><code><span class="term-symbol">&gt;</span>  sudo chmod 777 . -R</code></span>
+      <p class="text">E, por fim, dê o comando para dar autorização total para a pasta, assim você pode fazer o que quiser com seus arquivos e pastas, podendo criar, editar, apagar e move do jeito que você quiser. </p>
+      <p class="text">Após colocar seus projetos ali, vá até seu navegador e pesquise pelo endereço <span class="bold">localhost</span>. Se ocorreu tudo bem, seu projeto ou site aparecerão ali. </p>
     </div>
   </body>
 </html>
