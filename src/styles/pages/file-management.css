@@ -4,3 +4,7 @@
 @import url(../components/topic.css);
 @import url(../components/text.css);
 @import url(../components/bold.css);
+
+img {
+  width: 100%;
+}
