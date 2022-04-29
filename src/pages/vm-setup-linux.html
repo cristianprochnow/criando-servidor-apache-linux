@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-194x194.png" sizes="194x194">
+    <link rel="shortcut icon" href="../assets/icons/favicon.ico">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/pages/vm-setup-linux.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Linux, Windows, Máquinas Virtuais e Servidores Apache</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <a class="action-link" href="../../index.html">Voltar para o Início</a>
+        <a class="action-link" href="./so-modules.html">Próxima Página</a>
+      </header>
+
+      <h1 class="title">Criação de uma Máquina Virtual Linux</h1>
+
+      <h2 class="subtitle">Por que o Linux?</h2>
+      <p class="text">A primeira dúvida que já surge em meio a tudo isso é a grande pergunta “por que o Linux, e não um Windows até mesmo um Mac OS?”. Nada impede de usar alguma dessas duas alternativas. Ambas são ótimos sistemas operacionais que possuem fãs ao redor do mundo todo.</p>
+      <p class="text">No entanto, optaremos pelo Linux por sua facilidade em baixar pacotes, realizar configurações mais a fundo no sistema e sua velocidade de instalação para tudo o que é necessário nesse tutorial. Além disso, não podemos esquecer seu principal ponto forte que é o preço, já que qualquer distribuição Linux é totalmente gratuita em todo seu processo, desde a instalação, até seu uso. Com isso, qualquer um pode baixar da internet um destes exemplares e assim realizar o passo a passo.</p>
+
+      <h2 class="subtitle">Ok, tudo bem, Linux..., mas então, qual?</h2>
+      <p class="text">Tendo tudo isso em mente, optaremos pela distribuição Linux mais popular, o querido e clássico Ubuntu. Ele pode não ser a melhor distribuição Linux para o intuito desse tutorial, já que existem algumas que foram criadas exatamente para isso.</p>
+      <p class="text">Contudo, iremos usá-la por causa de sua aparência e sua facilidade no uso até mesmo para novos usuários. Fazendo assim com que todos consigam realizar a tarefa.</p>
+      <p class="text">Então, como primeiro passo, <a href="https://ubuntu.com/download/desktop" class="link">baixe sua ISO por aqui</a>.</p>
+
+      <h2 class="subtitle">Então vamos por isso em uso...</h2>
+      <p class="text">Com a nossa distro Linux já baixada, agora basta criar uma máquina virtual para, de fato, conseguir usá-la para nossos testes. Então, sendo assim, <a href="https://www.virtualbox.org/wiki/Downloads" class="link">baixe por aqui o Virtual Box</a>, aplicativo de criação de máquinas virtuais.</p>
+      <p class="text">Após baixar e instalar o programa acima, vamos então criar nossa primeira máquina virtual e configurá-la para uso.</p>
+
+      <h2 class="subtitle">Passo a passo de configuração</h2>
+
+      <h3 class="topic">Crie uma nova máquina</h3>
+      <img src="../assets/images/vm-setup/01-clicar-botao-novo.jpg" alt="Clicar botão Novo">
+      <p class="text">Selecione um nome e as configurações iniciais.</p>
+
+      <h3 class="topic">Selecione um nome e as configurações iniciais </h3>
+      <img src="../assets/images/vm-setup/02-configurar-nome-tipo.jpg" alt="Definir nome e tipo">
+      <p class="text">Pode colocar o nome que desejar na máquina, e então selecione o tipo dela (Linux) e a versão do Linux que usaremos (no caso, Ubuntu 64 bit).</p>
+
+      <h3 class="topic">Selecione a quantidade de memória</h3>
+      <img src="../assets/images/vm-setup/03-definindo-tamanho-memoria.jpg" alt="Definir quantidade de memória">
+      <p class="text">Você pode definir a quantidade de memória que desejar, mas o mais indicado é que seja mais ou menos a metade do que você possui em sua máquina. Assim, tanto seu PC, quanto sua máquina virtual, possuem fôlego para funcionar.</p>
+
+      <h3 class="topic">Armazenamento virtual </h3>
+      <img src="../assets/images/vm-setup/04-criando-disco.jpg" alt="Criar disco virtual">
+      <p class="text">Deixe a opção padrão marcada, para que um novo disco virtual seja criado agora, e então clique no botão de avançar.</p>
+      <img src="../assets/images/vm-setup/05-selecionando-tipo-disco.jpg" alt="Selecionar tipo de disco">
+      <p class="text">Deixe a primeira opção selecionada, para que o disco criado seja completamente compatível com o Virtual Box, e então vamos pular para a próxima etapa.</p>
+      <img src="../assets/images/vm-setup/06-dinamicamente-alocado.jpg" alt="Selecionar forma de armazenamento do disco">
+      <p class="text">Deixe a opção de “Dinamicamente Alocado” selecionada, que é a mais ideal para nós, nesse momento.</p>
+      <img src="../assets/images/vm-setup/07-tamanho-armazenamento.jpg" alt="Selecionar forma de armazenamento do disco">
+      <p class="text">Defina o tamanho do disco como 20 GB, e então clique em criar. Assim teremos espaço suficiente para o sistema operacional e para os programas que iremos instalar.</p>
+      <img src="../assets/images/vm-setup/08-definindo-iso.jpg" alt="Inserir imagem ISO">
+      <p class="text">Clique ali no link indicado na imagem, e após abrir o explorador de arquivos, selecione o arquivo da imagem do Ubuntu. Imagem que você realizou o download no início desse tutorial.</p>
+      <img src="../assets/images/vm-setup/09-start.jpg" alt="Inserir imagem ISO">
+      <p class="text">E pronto, agora está tudo preparado. Basta clicar no botão indicado, de iniciar, e começar a instalação do sistema operacional conforme o passo a passo do instalador.</p>
+    </div>
+  </body>
+</html>
