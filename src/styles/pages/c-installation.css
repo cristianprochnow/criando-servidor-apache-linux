@@ -2,11 +2,12 @@
 @import url(../components/wrapper.css);
 @import url(../components/title.css);
 @import url(../components/subtitle.css);
-@import url(../components/topic.css);
 @import url(../components/text.css);
-@import url(../components/link.css);
+@import url(../components/bold.css);
 @import url(../components/code-block.css);
+@import url(../components/topic.css);
 
 img {
   width: 100%;
+  margin-bottom: 1.6rem;
 }
